@@ -1,3 +1,6 @@
 [submodule ".keyboard/.keyboard"]
 	path = .keyboard/.keyboard
 	url = https://github.com/jasonrudolph/keyboard
+[submodule ".keyboard"]
+	path = .keyboard
+	url = https://github.com/jasonrudolph/keyboard
