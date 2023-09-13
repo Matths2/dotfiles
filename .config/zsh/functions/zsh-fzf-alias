@@ -1,10 +1,5 @@
 #!/bin/sh
 
-
-killport() { 
-sudo kill -9 $(sudo fuser -n tcp $1 2> /dev/null);
-}
-
 # fuzzy search through aliases and run selected alias
 fa() {
   local alias_name
@@ -32,34 +27,4 @@ fa() {
       eval "$alias_name"
     fi
   fi
-}
-
-# nnn conf for tmux sess
-# n() {
-# 	if [ -n "$TMUX" ]; then
-# 			nnn -ae $@
-# 	else
-# 			tmux new-session nnn -ae $@
-# 	fi
-# }
-
-pathprepend() {
-for ARG in "$@"
-do
-  while [[ $PATH =~ :$ARG: ]]
-  do
-    PATH=${PATH//:$ARG:/:}
-  done
-  PATH=${PATH#$ARG:}
-  PATH=${PATH%:$ARG}
-  export PATH=${ARG}:${PATH}
-done
-}
-
-function cd {
-    builtin cd "$@" && ls -laH
-}
-
-function awslogs {
-  aws --profile beelab --region "$1" logs tail --follow "$2" 
 }

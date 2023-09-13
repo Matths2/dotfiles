@@ -32,7 +32,7 @@ alias v="nvim"
 alias cat="bat --style=plain"
 
 # Journal uses its own vim config
-alias journal="nvim -u ~/.config/nvim-backup/journal.vim"
+alias journal="nvim -u ~/.config/nvim.old/journal.vim"
 
 # use this for dotfiles git repo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
