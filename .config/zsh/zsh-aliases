@@ -36,7 +36,7 @@ alias cat="bat --style=plain"
 alias journal="nvim -u ~/.config/nvim.old/journal.vim"
 
 # use this for dotfiles git repo
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # tmux
 alias tm="tmux"
