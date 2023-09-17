@@ -3,8 +3,9 @@
 alias clr="clear"
 alias reload="source ~/.config/zsh/.zshrc"
 alias zshconfig="v ~/.config/zsh"
-alias ll="ls -laH --color=auto"
-alias lt='du -sh * | sort -h'
+alias ls="lsd --group-directories-first"
+alias ll="ls --long --almost-all --human-readable" 
+alias lt='ls --tree --total-size'
 alias ..="cd .."
 alias .2="cd ../../"
 alias .3='cd ../../../'

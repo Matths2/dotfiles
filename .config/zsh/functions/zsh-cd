@@ -1,5 +1,5 @@
 #!/bin/sh
 
 function cd {
-    builtin cd "$@" && ls -laH --color=auto
+    builtin cd "$@" && lsd --group-directories-first --long --almost-all
 }
