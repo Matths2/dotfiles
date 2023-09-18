@@ -20,6 +20,8 @@ curl -Lks https://raw.githubusercontent.com/Matths2/dotfiles/macos/install.sh | 
 The script will clone this repo as a bare repo, set up a function which specifies git-dir and work-tree. Backup conflicting directories/files and checkout the dotfiles in their correct locations.
 
 ## Inspiration
-[Atlassian bare git repo blogpost](https://www.atlassian.com/git/tutorials/dotfiles).
+[Atlassian bare git repo blogpost](https://www.atlassian.com/git/tutorials/dotfiles)
+
 [Michael Bynens and his awesome macos settings](https://github.com/mathiasbynens/dotfiles/tree/main)
+
 [Jogendra dotfiles](https://github.com/jogendra/dotfiles)
