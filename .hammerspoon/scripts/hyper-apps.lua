@@ -7,15 +7,16 @@
 -- --------------------------------------------------------------------------------
 return {
 	---  { 'a' } RESERVED FOR WINDOW MANAGEMENT
-	{ 'w', 'Google Chrome' },         -- "W" for "Web Browser"
-	{ 'c', 'Hub | Microsoft Teams' }, -- "C" for "Chat" use for Teams web app
-	{ 'e', 'Alacritty' },             -- "E" for "Editor"
-	{ 'f', 'Finder' },                -- "F" for "Finder"
-	{ 'o', 'Microsoft Outlook' },     -- "O" for "OutlookOutlook
-	{ 's', 'Spotify' },               -- "S" for "Spotify"
-	{ 't', 'Alacritty' },             -- "T" for "Terminal"
-	{ 'm', 'Messages' },              -- "M" for "Messages"
-	{ 'd', 'Discord' },               -- "D" for "Discord"
-	{ 'b', 'DBeaver' },               -- "B" for "Beaver"
-	{ 'n', 'Neo4j Desktop' },
+	{ "w", "Google Chrome" }, -- "W" for "Web Browser"
+	-- { "c", "Hub | Microsoft Teams" }, -- "C" for "Chat" use for Teams web app
+	{ "c", "Microsoft Teams" }, -- "C" for "Chat" use for Teams web app
+	{ "e", "Visual Studio Code" }, -- "E" for "Editor"
+	{ "f", "Finder" }, -- "F" for "Finder"
+	{ "o", "Microsoft Outlook" }, -- "O" for "OutlookOutlook
+	{ "s", "Spotify" }, -- "S" for "Spotify"
+	{ "t", "Alacritty" }, -- "T" for "Terminal"
+	{ "m", "Messages" }, -- "M" for "Messages"
+	{ "d", "Discord" }, -- "D" for "Discord"
+	{ "b", "DBeaver" }, -- "B" for "Beaver"
+	{ "n", "Neo4j Desktop" },
 }

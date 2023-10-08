@@ -25,3 +25,5 @@ The script will clone this repo as a bare repo, set up a function which specifie
 [Michael Bynens and his awesome macos settings](https://github.com/mathiasbynens/dotfiles/tree/main)
 
 [Jogendra dotfiles](https://github.com/jogendra/dotfiles)
+
+[Jason Rudolph keyboard centric setup](https://github.com/jasonrudolph/keyboard)
