@@ -53,21 +53,19 @@ return require("lazy").setup({
 		end,
 	},
 	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("plugins.lspconfig")
-		end,
-	},
-	{
 		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+		},
 		config = function()
 			require("plugins.mason")
 		end,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 		config = function()
-			require("plugins.mason_lspconfig")
+			require("plugins.lspconfig")
 		end,
 	},
 	{
@@ -78,6 +76,7 @@ return require("lazy").setup({
 	},
 	{
 		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
 		dependencies = { "onsails/lspkind.nvim", "rafamadriz/friendly-snippets" },
 		run = "make install_jsregexp",
 		config = function()
@@ -166,10 +165,15 @@ return require("lazy").setup({
 		opts = {},
 	},
 	{
-		"jose-elias-alvarez/null-ls.nvim",
-		event = { "BufReadPost", "BufNewFile" },
+		"stevearc/conform.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
-			require("plugins.null-ls")
+			require("plugins.formatting")
 		end,
 	},
+	"mfussenegger/nvim-lint",
+	event = { "BufReadPre", "BufNewFile" },
+	config = function()
+		require("plugins.linting")
+	end,
 })

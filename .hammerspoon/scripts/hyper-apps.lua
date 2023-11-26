@@ -8,8 +8,8 @@
 return {
 	---  { 'a' } RESERVED FOR WINDOW MANAGEMENT
 	{ "w", "Google Chrome" }, -- "W" for "Web Browser"
-	-- { "c", "Hub | Microsoft Teams" }, -- "C" for "Chat" use for Teams web app
-	{ "c", "Microsoft Teams" }, -- "C" for "Chat" use for Teams web app
+	{ "c", "Hub | Microsoft Teams" }, -- "C" for "Chat" use for Teams web app
+	-- { "c", "Microsoft Teams (classic)" }, -- "C" for "Chat" use for Teams web app
 	{ "e", "Visual Studio Code" }, -- "E" for "Editor"
 	{ "f", "Finder" }, -- "F" for "Finder"
 	{ "o", "Microsoft Outlook" }, -- "O" for "OutlookOutlook

@@ -1,9 +1,22 @@
-#!/bin/zsh
-# shellcheck disable=SC2207
+#!/bin/sh
 
-# Doesn't let you press Ctrl-C
+# Confirm exit with Y/N
+function confirm_exit() {
+    read -rp "Do you really want to exit? (y/n): " choice
+    case "$choice" in
+        [Yy])
+            echo "Exiting..."
+            exit 0
+            ;;
+        *)
+            echo "Resuming..."
+            ;;
+    esac
+}
+
+# Trap Ctrl-C and call the confirmation function
 function ctrl_c() {
-	echo -e "\renter nil to drop to exit"
+    confirm_exit
 }
 
 trap ctrl_c SIGINT

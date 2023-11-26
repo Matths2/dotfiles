@@ -27,17 +27,30 @@ autoload -Uz colors && colors
 # Useful Functions
 source "$ZDOTDIR/zsh-utils"
 
+# load custom executable functions
+for function in $ZDOTDIR/functions/*; do
+	local filename="${function#$ZDOTDIR/functions/}"
+  zsh_add_file "functions/$filename" 
+done
+
 # Normal files to source
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
-# load custom executable functions
-for function in $ZDOTDIR/functions/*; do
-	local filename="${function#$ZDOTDIR/functions/}"
-  zsh_add_file "functions/$filename" 
-done
+# Append history instead of overwriting it
+setopt APPEND_HISTORY
+
+# Save the history after each command
+setopt INC_APPEND_HISTORY
+
+# Share the history among all shell instances
+setopt SHARE_HISTORY
+
+# Make new commands from other shells available to the current shell
+fc -R
+
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -47,6 +60,10 @@ zsh_add_plugin "johannchangpro/zsh-interactive-cd"
 zsh_add_completion "esc/conda-zsh-completion" false
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
+#
+# AWS cli completions
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
 
 # Key-bindings
 bindkey -s '^z' 'zi\n'
