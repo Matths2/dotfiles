@@ -202,7 +202,7 @@ function window.nextScreen(win)
 	end
 end
 
-windowLayoutMode = hs.hotkey.modal.new({}, 'F16')
+windowLayoutMode = hs.hotkey.modal.new({}, "F16")
 
 windowLayoutMode.entered = function()
 	windowLayoutMode.statusMessage:show()
@@ -219,20 +219,20 @@ function windowLayoutMode.bindWithAutomaticExit(mode, modifiers, key, fn)
 	end)
 end
 
-local status, windowMappings = pcall(require, 'keyboard.windows-bindings')
+local status, windowMappings = pcall(require, "scripts.windows-bindings")
 
 if not status then
-	windowMappings = require('keyboard.windows-bindings-defaults')
+	windowMappings = require("scripts.windows-bindings-defaults")
 end
 
 local modifiers = windowMappings.modifiers
-local showHelp  = windowMappings.showHelp
-local trigger   = windowMappings.trigger
-local mappings  = windowMappings.mappings
+local showHelp = windowMappings.showHelp
+local trigger = windowMappings.trigger
+local mappings = windowMappings.mappings
 
 function getModifiersStr(modifiers)
-	local modMap = { shift = '⇧', ctrl = '⌃', alt = '⌥', cmd = '⌘' }
-	local retVal = ''
+	local modMap = { shift = "⇧", ctrl = "⌃", alt = "⌥", cmd = "⌘" }
+	local retVal = ""
 
 	for i, v in ipairs(modifiers) do
 		retVal = retVal .. modMap[v]
@@ -242,7 +242,7 @@ function getModifiersStr(modifiers)
 end
 
 local msgStr = getModifiersStr(modifiers)
-msgStr = 'Window Layout Mode (' .. msgStr .. (string.len(msgStr) > 0 and '+' or '') .. trigger .. ')'
+msgStr = "Window Layout Mode (" .. msgStr .. (string.len(msgStr) > 0 and "+" or "") .. trigger .. ")"
 
 for i, mapping in ipairs(mappings) do
 	local modifiers, trigger, winFunction = table.unpack(mapping)
@@ -250,9 +250,9 @@ for i, mapping in ipairs(mappings) do
 
 	if showHelp == true then
 		if string.len(hotKeyStr) > 0 then
-			msgStr = msgStr .. (string.format('\n%10s+%s => %s', hotKeyStr, trigger, winFunction))
+			msgStr = msgStr .. (string.format("\n%10s+%s => %s", hotKeyStr, trigger, winFunction))
 		else
-			msgStr = msgStr .. (string.format('\n%11s => %s', trigger, winFunction))
+			msgStr = msgStr .. (string.format("\n%11s => %s", trigger, winFunction))
 		end
 	end
 
@@ -263,7 +263,7 @@ for i, mapping in ipairs(mappings) do
 	end)
 end
 
-local message = require('keyboard.status-message')
+local message = require("scripts.status-message")
 windowLayoutMode.statusMessage = message.new(msgStr)
 
 -- Use modifiers+trigger to toggle WindowLayout Mode

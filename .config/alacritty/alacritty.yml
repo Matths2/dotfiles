@@ -1,6 +1,6 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator
+#< Configuration for Alacritty, the GPU enhanced terminal emulator
 import:
-  - "/Users/holmgmat/.config/alacritty/color.yml"
+  - "Users/holmgmat/.config/alacritty/color.yml"
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -36,7 +36,6 @@ window:
 
   # Background opacity
   opacity: 1.0
-
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
@@ -232,7 +231,7 @@ key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
   - { key: Q,        mods: Command, action: Quit                         }
-  - { key: N,        mods: Command, action: SpawnNewInstance             }
+  - { key: N,        mods: Command, action: CreateNewWindow              }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
