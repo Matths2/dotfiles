@@ -14,7 +14,7 @@ See `/brew` for software bundle and install script.
 To install the dotfiles into your home directory you can run the following script, inspect it before running.
 
 ```shell
-curl -Lks https://raw.githubusercontent.com/Matths2/dotfiles/macos/install.sh | /bin/zsh
+curl -Lks https://raw.githubusercontent.com/mattjh1/dotfiles/main/install.sh | /bin/zsh
 ```
 
 The script will clone this repo as a bare repo, set up a function which specifies git-dir and work-tree. Backup conflicting directories/files and checkout the dotfiles in their correct locations.
