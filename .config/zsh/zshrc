@@ -72,7 +72,7 @@ bindkey "^n" down-line-or-beginning-search # Down
 
 # FZF
 source "$HOME/.fzf.zsh" 
-# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+export FZF_DEFAULT_OPTS="--history=$HOME/.fzf-history"
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

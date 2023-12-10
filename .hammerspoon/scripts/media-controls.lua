@@ -8,6 +8,7 @@ end
 
 local hyper = { "shift", "ctrl", "alt", "cmd" }
 
+-- Media controls
 hs.hotkey.bind(hyper, "F7", function()
 	mediaControl("REWIND")
 end)
