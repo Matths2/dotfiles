@@ -153,6 +153,11 @@
     "command": "workbench.action.terminal.focus"
   },
   {
+    "args": { "command": "rgf" },
+    "command": "command-runner.run",
+    "key": "cmd+f"
+  },
+  {
     "key": "ctrl+,",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"

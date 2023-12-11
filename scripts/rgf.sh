@@ -2,6 +2,9 @@
 ##
 # Interactive search.
 #
+
+trap 'exit' INT
+
 [[ -n $1 ]] && cd "$1" # go to provided folder or noop
 
 export FZF_DEFAULT_COMMAND="rg --column --line-number --no-heading --color=always -- ''"

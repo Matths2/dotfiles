@@ -125,7 +125,9 @@
     },
     "**/package-lock.json": true
   },
-
+  "command-runner.commands": {
+    "rgf": "rgf; exit"
+  },
   // vim stuff
   "editor.lineNumbers": "relative",
   "vim.useSystemClipboard": true,
@@ -215,6 +217,11 @@
       "before": ["leader", "F"],
       "commands": ["revealInExplorer"]
     },
+    // {
+    //   "before": ["leader", "f"],
+    //   "commands": ["command-runner.run"],
+    //   "args": { "command": "rgf; exit" }
+    // },
     {
       "before": ["leader", "f"],
       "commands": ["workbench.view.search"]
