@@ -39,7 +39,7 @@ if [[ $input == "" ]]; then
 elif [[ $input == 'nil' ]]; then
 	exit 1
 elif [[ $input =~ ^[0-9]+$ ]] && [[ $input -le $no_of_terminals ]]; then
-    terminal_name="${output_names[input]}"
+    terminal_name="${output_names[input - 1]}"
 	/opt/homebrew/bin/tmux attach -t "$terminal_name"
 else
 	/opt/homebrew/bin/tmux new-session -s "$input"
