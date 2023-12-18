@@ -210,6 +210,16 @@
     "command": "workbench.view.search",
     "when": "!editorTextFocus"
   },
+  {
+    "key": ", g",
+    "command": "workbench.view.scm",
+    "when": "!editorTextFocus"
+  },
+  {
+    "key": ", e",
+    "command": "workbench.view.explorer",
+    "when": "!editorTextFocus"
+  },
   // in file explorer, goto file-> enter, rename file CMD+enter (reversed)
   {
     "key": "cmd+enter",

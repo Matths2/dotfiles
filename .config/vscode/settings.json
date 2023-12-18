@@ -214,6 +214,14 @@
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
+      "before": ["leader", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
       "before": ["leader", "F"],
       "commands": ["revealInExplorer"]
     },
@@ -314,6 +322,5 @@
   "workbench.layoutControl.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "boot-java.rewrite.reconcile": true,
-  "window.zoomLevel": 1,
   "prettier.useEditorConfig": false
 }
