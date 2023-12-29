@@ -1,4 +1,5 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+local lspconfig = require("lspconfig")
 
 capabilities.textDocument.completion.completionItem = {
 	documentationFormat = { "markdown", "plaintext" },
@@ -19,7 +20,7 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 -- LSP Server config
-require("lspconfig").cssls.setup({
+lspconfig.cssls.setup({
 	capabilities = capabilities,
 	settings = {
 		scss = {
@@ -38,21 +39,23 @@ require("lspconfig").cssls.setup({
 		client.server_capabilities.document_formatting = false
 	end,
 })
-require("lspconfig").tsserver.setup({
+lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
 		client.server_capabilities.document_formatting = false
 	end,
 })
 
-require("lspconfig").html.setup({
+lspconfig.pyright.setup({})
+
+lspconfig.html.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
 		client.server_capabilities.document_formatting = false
 	end,
 })
 
-require("lspconfig")["lua_ls"].setup({
+lspconfig["lua_ls"].setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
