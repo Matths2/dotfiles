@@ -16,7 +16,7 @@ autocmd("InsertLeave", {
 -- Highlight yanked text
 autocmd("TextYankPost", {
 	callback = function()
-		vim.highlight.on_yank { higroup = "Visual", timeout = 100 }
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 100 })
 	end,
 })
 
@@ -27,4 +27,3 @@ autocmd("FileType", {
 		vim.opt_local.spell = true
 	end,
 })
-

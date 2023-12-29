@@ -38,7 +38,6 @@ local options = {
 		"toml",
 		"vim",
 		"yaml",
-
 	},
 	highlight = {
 		enable = true,

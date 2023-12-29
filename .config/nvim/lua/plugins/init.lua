@@ -31,10 +31,9 @@ return require("lazy").setup({
 		end,
 	},
 	{
-		"jedrzejboczar/possession.nvim",
-		dependencies = "nvim-lua/plenary.nvim",
+		"rmagatti/auto-session",
 		config = function()
-			require("plugins.possession")
+			require("plugins.auto-session")
 		end,
 	},
 	{
@@ -165,15 +164,9 @@ return require("lazy").setup({
 		opts = {},
 	},
 	{
-		"stevearc/conform.nvim",
-		event = { "BufReadPre", "BufNewFile" },
+		"nvimtools/none-ls.nvim",
 		config = function()
-			require("plugins.formatting")
+			require("plugins.none-ls")
 		end,
 	},
-	"mfussenegger/nvim-lint",
-	event = { "BufReadPre", "BufNewFile" },
-	config = function()
-		require("plugins.linting")
-	end,
 })

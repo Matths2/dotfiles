@@ -50,6 +50,8 @@ vim.keymap.set("n", "<C-j>", ":BufferLineCycleNext<CR>", opts)
 vim.keymap.set("n", "<C-k>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Nvim tree
+vim.keymap.set("n", ":qa", ":NvimTreeClose<CR>:qa<CR>", opts)
+vim.keymap.set("n", ":wqa", ":NvimTreeClose<CR>:wa<CR>:qa<CR>", opts)
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- nvim-spider (w,e,b replacement)
@@ -63,9 +65,6 @@ vim.keymap.set("n", "gcc", "<cmd> :lua require('Comment.api').toggle.linewise.cu
 vim.keymap.set("v", "gc", "<esc><cmd> :lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
 
 -- LSP
-vim.keymap.set("n", "dg", function()
-	vim.lsp.buf.declaration()
-end, opts)
 vim.keymap.set("n", "df", function()
 	vim.lsp.buf.definition()
 end, opts)
