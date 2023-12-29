@@ -75,7 +75,7 @@ return require("lazy").setup({
 	},
 	{
 		"L3MON4D3/LuaSnip",
-		tag = "v2.*",
+		version = "v2.*",
 		dependencies = { "onsails/lspkind.nvim", "rafamadriz/friendly-snippets" },
 		run = "make install_jsregexp",
 		config = function()
@@ -122,7 +122,8 @@ return require("lazy").setup({
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		build =
+		"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",

@@ -51,6 +51,7 @@ vim.keymap.set("n", "<C-k>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Nvim tree
 vim.keymap.set("n", ":qa", ":NvimTreeClose<CR>:qa<CR>", opts)
+vim.keymap.set("n", ":qa!", ":NvimTreeClose<CR>:qa!<CR>", opts)
 vim.keymap.set("n", ":wqa", ":NvimTreeClose<CR>:wa<CR>:qa<CR>", opts)
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
