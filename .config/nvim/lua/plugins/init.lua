@@ -27,7 +27,7 @@ return require("lazy").setup({
 			"kyazdani42/nvim-web-devicons",
 		},
 		config = function()
-			require("nvim-tree").setup({})
+			require("plugins.nvim-tree")
 		end,
 	},
 	{
@@ -96,7 +96,7 @@ return require("lazy").setup({
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
-			require("gitsigns").setup()
+			require("plugins.gitsigns")
 		end,
 	},
 	{
@@ -136,6 +136,7 @@ return require("lazy").setup({
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-fzf-native.nvim",
 			"nvim-telescope/telescope-file-browser.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
 		},
 		config = function()
 			require("plugins.telescope")
