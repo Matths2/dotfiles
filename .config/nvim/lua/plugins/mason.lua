@@ -25,6 +25,7 @@ require("mason-lspconfig").setup({
 		"emmet_ls",
 		"prismals",
 		"pyright",
+		"gopls",
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true,
@@ -38,5 +39,6 @@ require("mason-tool-installer").setup({
 		"black",
 		"pylint",
 		"eslint_d",
+		"gopls",
 	},
 })

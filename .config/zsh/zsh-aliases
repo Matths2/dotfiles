@@ -24,7 +24,6 @@ alias sn='spotify prev'
 alias spp='spotify pause'
 alias st='spotify status'
 alias zz='pmset displaysleepnow'
-alias myip='ip_info=$(my-ip); echo "$ip_info" | tee >(grep "Public IP:" | cut -d" " -f3 | pbcopy) && echo "\nPublic IP copied to clipboard"'
 alias mycomp='system_profiler SPSoftwareDataType SPHardwareDataType'
 alias kc="minikube kubectl --"
 alias vim="nvim"

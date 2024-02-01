@@ -37,6 +37,10 @@ return require("lazy").setup({
 		end,
 	},
 	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
 		"kylechui/nvim-surround",
 		version = "*",
 		event = "VeryLazy",
@@ -122,8 +126,7 @@ return require("lazy").setup({
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build =
-		"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
