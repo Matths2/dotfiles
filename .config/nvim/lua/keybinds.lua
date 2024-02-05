@@ -35,6 +35,7 @@ vim.keymap.set("n", "k", "gk", opts)
 -- :wa ? too long!!
 vim.keymap.set("n", "<leader>w", ":wa<CR>", opts)
 vim.keymap.set("n", "<leader>x", ':lua require("bufdel")<CR> <cmd>BufDel<cr>', opts)
+vim.keymap.set("n", "<leader>X", ':lua require("bufdel")<CR> <cmd>BufDelOthers<cr>', opts)
 
 -- Telescope
 vim.keymap.set("n", "<leader>b", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)

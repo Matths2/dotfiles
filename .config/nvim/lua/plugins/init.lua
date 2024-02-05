@@ -150,7 +150,7 @@ return require("lazy").setup({
 		"chrisgrieser/nvim-spider",
 	},
 	{
-		lazy = true,
+		lazy = false,
 		"gbprod/nord.nvim",
 		config = function()
 			require("plugins.nord")

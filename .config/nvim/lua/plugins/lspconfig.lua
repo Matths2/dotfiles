@@ -45,13 +45,13 @@ lspconfig.cssls.setup({
 		},
 	},
 	on_attach = function(client)
-		client.server_capabilities.document_formatting = false
+		client.server_capabilities.docmentRangeFormattingProvider = false
 	end,
 })
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
-		client.server_capabilities.document_formatting = false
+		client.server_capabilities.docmentRangeFormattingProvider = false
 	end,
 	commands = {
 		OrganizeImports = {

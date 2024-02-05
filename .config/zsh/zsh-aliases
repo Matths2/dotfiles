@@ -37,6 +37,10 @@ alias journal="nvim -u ~/.config/nvim.old/journal.vim"
 # use this for dotfiles git repo
 alias dot='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+# lazygit
+alias lg='lazygit'
+alias lg-dot='lazygit --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
 # tmux
 alias tm="tmux"
 alias tma="tmux attach-session"
