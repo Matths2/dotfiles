@@ -18,3 +18,5 @@ fi;
 
 dot checkout
 dot config status.showUntrackedFiles no
+
+echo "Reload Configuration"

@@ -26,7 +26,6 @@ local options = {
 		"json",
 		"kotlin",
 		"latex",
-		"markdown",
 		"ninja",
 		"php",
 		"perl",
@@ -38,6 +37,8 @@ local options = {
 		"toml",
 		"vim",
 		"yaml",
+		"markdown",
+		"markdown_inline",
 	},
 	highlight = {
 		enable = true,

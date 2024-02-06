@@ -21,6 +21,18 @@ return require("lazy").setup({
 	"ojroques/nvim-bufdel",
 	"ahmedkhalf/project.nvim",
 	{
+		"epwalsh/obsidian.nvim",
+		version = "*",
+		lazy = true,
+		ft = "markdown",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("plugins.obsidian")
+		end,
+	},
+	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		dependencies = {

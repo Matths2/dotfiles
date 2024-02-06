@@ -18,3 +18,5 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file $XDG_CONFIG_HOME/brew/Brewfile
 
+echo "Reload shell"
+
