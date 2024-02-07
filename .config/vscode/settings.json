@@ -1,6 +1,6 @@
 {
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[typescript]": {
@@ -320,7 +320,6 @@
   },
   "editor.minimap.enabled": false,
   "workbench.layoutControl.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false,
   "boot-java.rewrite.reconcile": true,
   "prettier.useEditorConfig": false
 }

@@ -21,6 +21,18 @@ return require("lazy").setup({
 	"ojroques/nvim-bufdel",
 	"ahmedkhalf/project.nvim",
 	{
+		"epwalsh/obsidian.nvim",
+		version = "*",
+		lazy = true,
+		ft = "markdown",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("plugins.obsidian")
+		end,
+	},
+	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		dependencies = {
@@ -35,6 +47,10 @@ return require("lazy").setup({
 		config = function()
 			require("plugins.auto-session")
 		end,
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 	{
 		"kylechui/nvim-surround",
@@ -69,6 +85,7 @@ return require("lazy").setup({
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		lazy = true,
 		config = function()
 			require("plugins.cmp")
 		end,
@@ -76,6 +93,7 @@ return require("lazy").setup({
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
+		lazy = true,
 		dependencies = { "onsails/lspkind.nvim", "rafamadriz/friendly-snippets" },
 		run = "make install_jsregexp",
 		config = function()
@@ -122,8 +140,7 @@ return require("lazy").setup({
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build =
-		"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
@@ -147,7 +164,7 @@ return require("lazy").setup({
 		"chrisgrieser/nvim-spider",
 	},
 	{
-		lazy = true,
+		lazy = false,
 		"gbprod/nord.nvim",
 		config = function()
 			require("plugins.nord")

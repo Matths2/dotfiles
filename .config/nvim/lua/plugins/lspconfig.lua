@@ -1,6 +1,15 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lspconfig = require("lspconfig")
 
+local function organize_imports()
+	local params = {
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+		title = "",
+	}
+	vim.lsp.buf.execute_command(params)
+end
+
 capabilities.textDocument.completion.completionItem = {
 	documentationFormat = { "markdown", "plaintext" },
 	snippetSupport = true,
@@ -36,24 +45,25 @@ lspconfig.cssls.setup({
 		},
 	},
 	on_attach = function(client)
-		client.server_capabilities.document_formatting = false
+		client.server_capabilities.docmentRangeFormattingProvider = false
 	end,
 })
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = function(client)
-		client.server_capabilities.document_formatting = false
+		client.server_capabilities.docmentRangeFormattingProvider = false
 	end,
+	commands = {
+		OrganizeImports = {
+			organize_imports,
+			description = "Organize Imports",
+		},
+	},
 })
 
 lspconfig.pyright.setup({})
 
-lspconfig.html.setup({
-	capabilities = capabilities,
-	on_attach = function(client)
-		client.server_capabilities.document_formatting = false
-	end,
-})
+lspconfig.gopls.setup({})
 
 lspconfig["lua_ls"].setup({
 	on_attach = on_attach,
