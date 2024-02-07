@@ -595,6 +595,16 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 cp ~/.config/vscode/{keybindings.json,settings.json} ~/Library/Application\ Support/Code/User/ 2> /dev/null
 
 ###############################################################################
+# Hammerspoon                                                                 #
+###############################################################################
+
+# Disable Dock icon for Hammerspoon
+defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool FALSE
+
+# Enable apps at startup
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Hammerspoon.app", hidden:true}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Karabiner-Elements.app", hidden:true}' > /dev/null
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -615,7 +625,10 @@ for app in "Activity Monitor" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Visual Studio Code" \
+	"Hammerspoon" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
+
+echo "Remember to enable Accessibility for Hammerspoon."
 echo "Done. Note that some of these changes require a logout/restart to take effect."

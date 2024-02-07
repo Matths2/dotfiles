@@ -85,6 +85,7 @@ return require("lazy").setup({
 	},
 	{
 		"hrsh7th/nvim-cmp",
+		lazy = true,
 		config = function()
 			require("plugins.cmp")
 		end,
@@ -92,6 +93,7 @@ return require("lazy").setup({
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
+		lazy = true,
 		dependencies = { "onsails/lspkind.nvim", "rafamadriz/friendly-snippets" },
 		run = "make install_jsregexp",
 		config = function()

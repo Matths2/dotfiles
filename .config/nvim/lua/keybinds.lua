@@ -37,6 +37,11 @@ vim.keymap.set("n", "<leader>w", ":wa<CR>", opts)
 vim.keymap.set("n", "<leader>x", ':lua require("bufdel")<CR> <cmd>BufDel<cr>', opts)
 vim.keymap.set("n", "<leader>X", ':lua require("bufdel")<CR> <cmd>BufDelOthers<cr>', opts)
 
+-- Obsidian
+vim.keymap.set("n", "<leader>op", ":ObsidianQuickSwitch<CR>", opts)
+vim.keymap.set("n", "<leader>of", ":ObsidianSearch<CR>", opts)
+vim.keymap.set("n", "<leader>ot", ":ObsidianToday<CR>", opts)
+
 -- Telescope
 vim.keymap.set("n", "<leader>b", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 vim.keymap.set("n", "<leader>f", ':lua require("telescope")<CR> <cmd>Telescope live_grep<cr>', opts)

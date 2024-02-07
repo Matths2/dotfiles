@@ -12,6 +12,7 @@ return {
 	-- { "c", "Microsoft Teams (classic)" }, -- "C" for "Chat" use for Teams web app
 	{ "e", "Visual Studio Code" }, -- "E" for "Editor"
 	{ "f", "Finder" }, -- "F" for "Finder"
+	{ "v", "Obsidian" }, -- "F" for "Finder"
 	{ "o", "Microsoft Outlook" }, -- "O" for "OutlookOutlook
 	{ "s", "Spotify" }, -- "S" for "Spotify"
 	{ "t", "Alacritty" }, -- "T" for "Terminal"
