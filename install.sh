@@ -19,4 +19,14 @@ fi;
 dot checkout
 dot config status.showUntrackedFiles no
 
+mkdir -p $HOME/.local/bin
+
+# Create symlinks for scripts
+for script in $HOME/scripts/*; do
+    if [ -f "$script" ] && [ -x "$script" ]; then
+        ln -sfn "$script" "$HOME/.local/bin/$(basename "$script")"
+    fi
+done
+
+
 echo "Reload Configuration"
