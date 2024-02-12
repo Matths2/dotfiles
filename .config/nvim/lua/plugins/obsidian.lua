@@ -8,6 +8,7 @@ local options = {
 	notes_subdir = "vault",
 	daily_notes = {
 		folder = "vault/dailies",
+		template = "log-template.md",
 	},
 	completion = {
 		-- Set to false to disable completion.
@@ -36,6 +37,7 @@ local options = {
 		-- Mutually exclusive with 'prepend_note_id' and 'prepend_note_path'.
 		use_path_only = false,
 	},
+	open_app_foreground = true,
 	-- Optional, customize how names/IDs for new notes are created.
 	note_id_func = function(title)
 		-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
