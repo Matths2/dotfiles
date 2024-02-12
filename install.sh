@@ -7,16 +7,16 @@ function dot {
 }
 
 mkdir -p $HOME/.config-backup
-dot checkout dev
+dot checkout
 
 if [ $? = 0 ]; then
   echo "Checked out config.";
 else
   echo "Backing up pre-existing dot files.";
-dot checkout dev 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} $HOME/.config-backup/{} && mv -T scripts $HOME/.config-backup/scripts 2>/dev/null
+dot checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} $HOME/.config-backup/{} && mv -T scripts $HOME/.config-backup/scripts 2>/dev/null
 fi;
 
-dot checkout dev
+dot checkout
 dot config status.showUntrackedFiles no
 
 mkdir -p $HOME/.local/bin
