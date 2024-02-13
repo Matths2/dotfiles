@@ -321,6 +321,5 @@
   "editor.minimap.enabled": false,
   "workbench.layoutControl.enabled": false,
   "boot-java.rewrite.reconcile": true,
-  "prettier.useEditorConfig": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "prettier.useEditorConfig": false
 }

@@ -18,19 +18,5 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file $XDG_CONFIG_HOME/brew/Brewfile
 
-# Install casks
-brew install --cask alacritty
-brew install --cask flux
-brew install --cask font-hack-nerd-font
-brew install --cask hammerspoon
-brew install --cask karabiner-elements
-brew install --cask firefox
-brew install --cask kitty
-brew install --cask raycast
-brew install --cask temurin
-brew install --cask visual-studio-code
-brew install --cask google-chrome
-brew install --cask discord
-
 echo "Reload shell"
 
