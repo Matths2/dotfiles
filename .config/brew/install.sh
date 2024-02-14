@@ -16,7 +16,7 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $XDG_CONFIG_HOME/brew/Brewfile
+brew bundle --file ~/.config/brew/Brewfile
 
 echo "Reload shell"
 
