@@ -23,9 +23,9 @@ mkdir -p $HOME/.local/bin
 
 # Create symlinks for scripts
 for script in $HOME/scripts/*; do
-    if [ -f "$script" ] && [ -x "$script" ]; then
-        ln -sfn "$script" "$HOME/.local/bin/$(basename "$script")"
-    fi
+  if [ -f "$script" ] && [ -x "$script" ]; then
+    ln -sfn "$script" "$HOME/.local/bin/$(basename "$script")"
+  fi
 done
 
 
