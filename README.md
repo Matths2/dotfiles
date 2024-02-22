@@ -1,5 +1,6 @@
 # Dotfiles
-
+This repo is now archived, i've decided to move on to using `chezmoi` + `ansible` to handle my dotfiles.
+----
 These dotfiles are curated from many sources and exists mainly for my own reference, but feel free to pick out any goodness that might fit well into your config. This repo does not require symlinks, its a bare git repo with git-dir set to `~/dotfiles` and work-dir set to `$HOME`.
 [See this Atlassian blog post for reference](https://www.atlassian.com/git/tutorials/dotfiles).
 
